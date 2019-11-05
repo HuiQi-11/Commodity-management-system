@@ -16,9 +16,11 @@ public class DateUtil {
 
     public static Date strToDate(String date) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date result = null;
+        Date result = new Date();
         try {
+            if (date!=null) {
             result = sdf.parse(date);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
